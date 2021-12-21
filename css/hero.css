@@ -1,0 +1,40 @@
+.hero__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 82px;
+  color: #ffff;
+}
+.hero__descr {
+  margin: 0;
+  margin-bottom: 92px;
+  max-width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffff;
+}
+.btn__hero {
+  width: 315px;
+  height: 70px;
+  padding: 22px 35px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--purple-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.btn__hero:hover {
+  border: 3px solid #d1a9f0;
+  padding: 22px 31px;
+}
+.about-us {
+  margin-bottom: 70px;
+}
+.about-us__descr {
+  max-width: 68%;
+}

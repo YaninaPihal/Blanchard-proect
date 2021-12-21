@@ -1,0 +1,19 @@
+@media (max-width: 1490px) {
+  .nav__item:not(:last-child) {
+    margin-right: 7%;
+  }
+  .nav__item:last-child {
+    margin-right: 450px;
+  }
+  .publication__swiper {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1390px) {
+  .accordin__title {
+    margin-right: 30%;
+  }
+  .accordion__list:not(:last-child) {
+    margin-right: 20px;
+  }
+}

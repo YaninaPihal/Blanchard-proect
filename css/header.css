@@ -1,0 +1,204 @@
+.header-menu__top {
+  background-color: var(--background-header-top);
+}
+.header__container-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.header-logo__link {
+  margin-right: auto;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.nav__item:last-child {
+  margin-right: 273px;
+}
+
+.nav__item {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-white);
+}
+.header__left-entrance {
+  padding-left: 27px;
+  width: 80px;
+  background-image: url("../img/entrance-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 7px 6px;
+}
+.entrance__link {
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 24px;
+}
+.nav__item:hover:not(:active),
+.nav__item:focus:not(:focus-visible),
+.nav__item:focus-visible {
+  color: #7943a4;
+  transition: 0.3s ease-in-out;
+}
+
+/*выпадающий список*/
+.menu {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.menu__item {
+  position: relative;
+}
+.menu__item:not(:last-child) {
+  margin-right: 60px;
+}
+.menu__btn {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: inherit;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  transition: background-color 0.3s ease-in-out;
+}
+.menu__btn--active {
+  background-color: inherit;
+}
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 300px;
+  height: 300px;
+  padding: 40px 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown__link {
+  margin-bottom: 20px;
+  display: block;
+  width: 220px;
+  height: 40px;
+  padding: 10px 14px;
+  color: #ffffff;
+  background-color: gray;
+}
+
+/*поиск на сайте*/
+.form__search {
+  margin-left: auto;
+}
+.form__input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  color: #ffff;
+  width: 218px;
+  padding-bottom: 3px;
+  padding-left: 0;
+  transition: border-bottom 0.15s linear;
+  position: relative;
+  bottom: 1px;
+  right: 1px;
+}
+.form__input::placeholder {
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 25px;
+}
+.form__btn {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  width: 25px;
+  height: 22px;
+  border: none;
+  position: relative;
+  top: 5px;
+  right: 3px;
+  cursor: pointer;
+  transition: background-image 0.15s linear;
+}
+.form__search:hover .form__input,
+.form__input:focus {
+  border-bottom: 1px solid #7943a4;
+}
+.form__btn svg path,
+.form__btn svg rect {
+  transition: fill 0.15s linear;
+}
+
+/*swiper*/
+
+.header__swiper {
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.header__swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.header__swiper-slide {
+  flex-shrink: 0;
+  min-height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header__swiper-slide:nth-child(1) {
+  background-image: url("../img/castle-background.jpg");
+}
+.header__swiper-slide:nth-child(2) {
+  background-image: url("../img/painting-bagraund.jpg");
+}
+.header__swiper-slide:nth-child(3) {
+  background-image: url("../img/forest-bagraund.jpg");
+}
+.header__img {
+  max-width: 100%;
+  min-height: 700px;
+}
+.hero__wrapper {
+  position: absolute;
+  z-index: 2;
+  padding-left: 8%;
+  padding-top: 7.3%;
+  max-width: 40%;
+}
+.header__content {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+.header__container-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
