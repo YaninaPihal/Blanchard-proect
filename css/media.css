@@ -9,11 +9,214 @@
     max-width: 1000px;
   }
 }
-@media (max-width: 1390px) {
-  .accordin__title {
-    margin-right: 30%;
+@media (max-width: 1290px) {
+  .nav__item:not(:last-child) {
+    margin-right: 5%;
   }
-  .accordion__list:not(:last-child) {
-    margin-right: 20px;
+  .nav__item:last-child {
+    margin-right: 310px;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 35px;
+  }
+  .accordion__list {
+    max-height: 450px;
+  }
+
+  .events__card:not(:nth-child(3n)) {
+    margin-right: 40px;
+  }
+  .publication__swiper {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1200px) {
+  /*.burger*/
+  .burger {
+    display: block;
+    width: 30px;
+    position: relative;
+    height: 23px;
+    background: none;
+    border: none;
+  }
+  .burger__line {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 3.5px;
+    background-color: var(--color-white);
+  }
+  .burger__line:first-child {
+    top: 0;
+    left: 0;
+  }
+  .burger__line:nth-child(2) {
+    width: 75%;
+    top: 45%;
+    left: 0;
+  }
+  .burger__line:last-child {
+    width: 50%;
+    bottom: 0;
+    left: 0;
+  }
+  .nav {
+    flex-direction: column;
+    max-width: 1200px;
+    position: fixed;
+    right: -100vw;
+    padding: 25px;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-black);
+    transition: left 0.3s ease-in-out;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav__item {
+    margin-right: 0;
+    color: var(--color-white);
+  }
+  .nav__item {
+    margin-bottom: 30px;
+  }
+  .nav__item:last-child {
+    margin-bottom: 80px;
+  }
+  .burger-close {
+    position: relative;
+    display: block;
+    width: 23px;
+    background: none;
+    border: none;
+    margin-bottom: 30px;
+  }
+  .burger-close::before,
+  .burger-close::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-white);
+  }
+  .burger-close::before {
+    transform: rotate(45deg);
+  }
+  .burger-close::after {
+    transform: rotate(-45deg);
+  }
+  .nav.burger-active {
+    left: 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .header-menu__bottom {
+    display: none;
+  }
+
+  /*выплывающее меню поиска*/
+  .search {
+    display: inline-block;
+    position: relative;
+  }
+  .search__img {
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  }
+  .search__btn {
+    margin-top: 3px;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    border: none;
+    position: relative;
+    z-index: 2;
+    display: none;
+  }
+  .search__form {
+    width: 250px;
+    height: 40px;
+    padding: 5px 45px 5px 10px;
+    box-shadow: 0 0 5px 0 #000;
+    background-color: inherit;
+    border: 1px solid var(--color-white);
+    border-radius: 20px;
+    font-weight: 600;
+    position: absolute;
+    left: -215px;
+    top: -2px;
+    display: none;
+    z-index: -1;
+    color: var(--dark-purple-color);
+    transition-duration: 0.5s;
+    transition-property: opacity;
+  }
+  .search__form::placeholder {
+    color: #ffff;
+  }
+  .search--active .search__form {
+    display: block;
+    z-index: 1;
+  }
+  .search__img rect {
+    fill: var(--color-white);
+  }
+  .search__img path {
+    stroke: var(--color-white);
+  }
+  .search--active .search__btn {
+    display: block;
+  }
+  .search--active .search__img {
+    display: none;
+  }
+  .search--active .nav__item:last-child {
+    margin-right: 205px;
+  }
+  .search:hover svg rect {
+    fill: var(--color-white);
+  }
+  .search:hover svg path {
+    stroke: var(--color-white);
+  }
+  .gallery__left {
+    max-width: 30%;
+  }
+  .swiper-wrapper {
+    max-width: 750px;
+  }
+  .publication__swiper-wrapper {
+    max-width: 700px;
+  }
+
+  .partners__swiper-wrapper {
+    max-width: 950px;
+  }
+
+  .partners__slide {
+    margin-top: 0;
+  }
+
+  .events__card:not(:nth-child(3n)) {
+    margin-right: 2.6%;
+  }
+}
+
+
+@media (max-width: 1040px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+  .partners__slide {
+    height: 130px;
   }
 }

@@ -28,11 +28,10 @@
 }
 
 :root {
-  --background-header-top: #000000;
+  --color-black: #000000;
   --purple-color: #7943a4;
-  --color-orange: #ff9900;
-  --color-dark-orange: #e1670e;
-  --color-light-orange: #f7b045;
+  --dark-purple-color:#9d5cd0;
+  --light-purple-color:#D1A9F0;
   --color-white: #ffff;
   --color-gray: #cacaca;
   --color-dark-gray: #666666;
@@ -56,7 +55,7 @@ a {
 a:focus,
 button:focus,
 textarea:focus {
-  outline: 1px solid var(--purple-color);
+  outline: none;
   outline-offset: 3px;
 }
 label:focus,

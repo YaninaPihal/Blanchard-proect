@@ -90,9 +90,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  padding: px;
   max-width: 450px;
-  min-height: 150px;
+  height: 150px;
   border: 1px solid #cacaca;
   filter: grayscale(100%);
 }

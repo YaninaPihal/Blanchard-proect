@@ -1,3 +1,10 @@
+.hero__wrapper {
+  position: absolute;
+  z-index: 2;
+  padding-left: 0%;
+  padding-top: 7.3%;
+  max-width: 40%;
+}
 .hero__title {
   margin: 0;
   margin-bottom: 20px;
@@ -19,10 +26,10 @@
 .btn__hero {
   width: 315px;
   height: 70px;
-  padding: 22px 35px;
+  padding: 22px 31px;
   border-radius: 40px;
-  border: none;
-  background-color: var(--purple-color);
+  border: 3px solid var(--dark-purple-color);
+  background-color: var(--dark-purple-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -30,7 +37,15 @@
 }
 .btn__hero:hover {
   border: 3px solid #d1a9f0;
-  padding: 22px 31px;
+}
+.btn__hero:focus {
+  border: 3px solid var(--color-white);
+  box-shadow: 0 0 0 2px #c283f3;
+}
+.btn__hero:active {
+  border: 3px solid #d1a9f0;
+  background: var(--purple-color);
+  box-shadow: none;
 }
 .about-us {
   margin-bottom: 70px;

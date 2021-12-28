@@ -65,7 +65,7 @@ const defaultSelect = () => {
 
 defaultSelect();
 
-/*swiper*/
+/*swiper gallery*/
 let gallerySlider = new Swiper(".swiper-right--content", {
   slidesPerView: 2,
   slidesPerGroup: 2,
@@ -99,7 +99,7 @@ let gallerySlider = new Swiper(".swiper-right--content", {
       spaceBetween: 30
     },
 
-    1200: {
+    1205: {
       slidesPerView: 3,
       grid: {
         rows: 2
@@ -186,6 +186,10 @@ let swiperPublication = new Swiper(sliderPublication, {
     1490: {
       slidesPerView: 3,
       spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 50
     }
   },
 
@@ -219,9 +223,8 @@ let mySwiper = new Swiper('.swiper-partners', {
       },
       spaceBetween: 30
     },
-
     1200: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       grid: {
         rows: 1
       },
@@ -249,7 +252,60 @@ function init() {
     iconImageSize: [20, 20],
     iconImageOffset: [-3, -42]
   });
-  // Размещение геообъекта на карте.
+  myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+  myMap.controls.remove('searchControl'); // удаляем поиск
+ myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+  myMap.controls.remove('typeSelector'); // удаляем тип
+ myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+ myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+ myMap.controls.remove('rulerControl'); // удаляем контрол правил
+ myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  //Размещение геообъекта на карте.
   myMap.geoObjects.add(myPlacemark);
 }
+
 ymaps.ready(init);
+
+//accordion
+$(function () {
+  $("#accordion").accordion({
+    collapsible: true,
+    heightStyle: 'content',
+  });
+});
+
+//burger
+const burgerBtn = document.querySelector('.burger');
+const menuClose = document.querySelector('.burger-close');
+const itemClose = document.querySelector('.nav__list');
+const menuBurger = document.querySelector('.nav');
+
+
+burgerBtn.addEventListener('click', () => {
+  menuBurger.classList.add('burger-active');
+});
+
+menuClose.addEventListener('click', () => {
+  menuBurger.classList.remove('burger-active');
+});
+
+itemClose.addEventListener('click', () => {
+  menuBurger.classList.remove('burger-active');
+});
+
+//search-1024
+const search = document.querySelector('.search');
+const body = document.querySelector('body');
+const b = document.querySelector('.search__form');
+
+search.addEventListener('click', function (e) {
+  e.stopPropagation();
+  this.classList.add('search--active');
+});
+
+body.addEventListener('click', function () {
+  search.classList.remove('search--active');
+});
+b.addEventListener('click', function () {
+  search.classList.remove('search--active');
+});

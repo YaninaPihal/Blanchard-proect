@@ -76,52 +76,30 @@
 }
 
 /*accordion*/
+.accordion {
+  width: 800px;
+}
 .accordion__wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 800px;
+  position: relative;
+  padding: 41px 0;
+  border-top: 1px solid var(--color-gray);
 }
-
-.accordion__control {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  padding: 32px 0;
-  border: 1px solid #cacaca;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-}
-.accordion__control::-webkit-details-marker {
-  display: none;
-}
-.accordion__control:hover {
-  border-top: 1px solid #d1a9f0;
-  border-bottom: 1px solid #d1a9f0;
-}
-.accordion[open] .accordion__control {
-  border: 1px solid #d1a9f0;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-}
-.accordin__title {
+.accordion__title {
   margin: 0;
-  margin-right: 61%;
-  max-width: 207px;
+  background-color: inherit;
+  border: none;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 24px !important;
   line-height: 32px;
   color: #333333;
 }
-
-.accordion[open] .accordin__title {
-  color: #d1a9f0;
-}
 .accordion__icon {
-  position: relative;
-  display: inline-block;
   width: 50px;
   height: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 90%;
   border-radius: 100%;
   background-color: #bfbfbf;
   background-image: url("../img/checkmark-icon.svg");
@@ -129,29 +107,28 @@
   background-position: center;
   background-size: 15px 15px;
 }
-
-.accordion[open] .accordion__icon {
+.ui-state-active .accordion__icon {
   transform: rotate(180deg);
-  background-color: #d1a9f0;
+  transition: transform 0.3s ease-in-out;
 }
-.accordion__control:hover .accordin__title {
-  color: #d1a9f0;
+
+.accordion__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 350px;
+  border: inherit;
 }
-.accordion__control:hover .accordion__icon {
-  background-color: #d1a9f0;
+.ui-accordion-content {
+  min-height: auto;
+  padding-bottom: 40px;
 }
 .accordion__content {
   padding: 25px 0;
   display: flex;
-  border: 1px solid #cacaca;
-  border-top: 1px solid transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
+  flex-direction: column;
 }
 
-.accordion__list:not(:last-child) {
-  margin-right: 60px;
-}
 .accordion__btn {
   max-width: 100%;
   background-color: inherit;
@@ -206,5 +183,34 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #9d5cd0;
+  color: var(--dark-purple-color) !important;
+}
+.accordion__content--void {
+  border: none;
+}
+.accordion__wrapper:last-child {
+  border-bottom: 1px solid var(--dark-purple-color);
+}
+
+.accordion__wrapper:hover {
+  border-top: 1px solid var(--dark-purple-color);
+}
+
+.accordion__wrapper:hover + .accordion__wrapper {
+  border-top: 1px solid var(--dark-purple-color);
+}
+
+.accordion__wrapper:last-child:hover {
+  border-bottom: 1px solid var(--dark-purple-color);
+}
+
+.accordion__wrapper:hover .accordion__title {
+  color: var(--dark-purple-color);
+}
+.accordion__wrapper:hover .accordion__icon {
+  background-color: var(--dark-purple-color);
+}
+
+.accordion__wrapper:focus {
+  border-top: 1px solid var(--dark-purple-color);
 }

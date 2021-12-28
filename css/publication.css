@@ -132,6 +132,16 @@ input[type="number"] {
   line-height: 32px;
   color: #ffffff;
 }
+.price__input:hover {
+  background: var(--dark-purple-color);
+}
+.price__input:focus {
+  border: 1px solid var(--purple-color);
+  background: var(--dark-purple-color);
+}
+.price__input:active {
+  background: var(--color-white);
+}
 .price__input::placeholder {
   color: #ffff;
 }
@@ -230,7 +240,7 @@ input[type="number"] {
   line-height: 32px;
   color: #ffff;
 }
-.book__wrapper--right{
+.book__wrapper--right {
   padding-top: 5px;
 }
 .book__price {
@@ -249,4 +259,17 @@ input[type="number"] {
   font-size: 16px;
   line-height: 22px;
   color: #ffff;
+}
+.book__btn:hover {
+  border: 3px solid var(--light-purple-color);
+  background: var(--dark-purple-color);
+  color: var(--color-white);
+}
+.book__btn:focus {
+  border: 3px solid var(--color-white);
+  box-shadow: 0 0 0 2px #c283f3;
+}
+.book__btn:active {
+  background: var(--purple-color);
+  color: var(--color-white);
 }
